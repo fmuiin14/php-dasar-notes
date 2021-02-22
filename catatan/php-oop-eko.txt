@@ -1,0 +1,87 @@
+Eko Kurniawan Khennedy
+Teknikal Arsitek di salah satu perusahaan terbesar di Indonesia
+pengalaman >= 10tahun
+
+Pengenalan OOP
+	OOP merupakan sudut pandang bahasa pemrograman yg berkonsep objek
+	Ada beberapa istilah yg perlu dimengerti, yaitu Objek dan Class
+	
+	Apa Itu Objek?
+		Adalah data yg berisi field/properties/attributes dan method/function/behavior
+		
+	Apa Itu Class?
+		Adalah blueprint, prototype atau cetakan untuk membuat Objek
+		Berisikan deklarasi semua properties dan functions yg dimiliki oleh objek
+		Setiap objek selalu dibuat dari class
+		Sebuah class bisa membuat objek tanpa batas
+	Dari class, baru bisa buat objek
+	
+	Class dan Object
+		class Car, objeknya avanza, almaz, mobilio
+		class person, objek eko, joko, budi
+		
+Class
+	Untuk membuat class, kita bisa menggunakan kata kunci class
+	Biasanya nama class adalah format CamelCase, dan tidak boleh spasi
+	
+Object
+	Merupakan hasil instansiasi dari class
+	Untuk membuat object, kita bisa menggunakan kata kunci new, dan diikuti dengan nama Class dan ()
+	
+Properties
+	Fields/ Properties/ Attributes adalah data yg bisa kita sisipkan di dalam Object
+	Sebelum kita bisa memasukkan data di fields, kita harus mendeklarasikan data apa aja yg dimiliki objek tsb didalam deklarasi classnya
+	Membuat field sama seperti membuat variable, namun ditempatkan di block class, dan diawali dengan kata kunci var
+	
+	Manipulasi Properties
+		Field yg ada di objek bisa kita manipulasi
+		Untuk mengakses field, kita perlu kata kunci -> setelah nama object dan diikuti nama fieldsnya.
+		
+	Properties Type Declaration
+		Sama seperti di function, kita juga bisa membuat type declaration di properties
+		Ini membuat PHP otomatis cek tipe data yg sesuai dengan type declaration yg telah ditentukan
+		Jika kita mencoba mengubah properties dengan type yg berbeda, maka otomatis akan error. Dan PHP memiliki fitur Type Juggling,
+		secara otomatis bisa konversi tipe data lain
+		Untuk menambahkan type declaration, kita bisa tambahkan setelah kata kunci var di properties
+		
+	Default Properties Value
+		Ini mirip seperti default value, jadi jika tidak diubah di objek, maka properties akan memiliki value tsb
+		
+	Nullable Properties
+		Saat kita menambah type declaration di properties atau di function argument, maka secara otomatis kita tidak bisa mengirim data
+		null ke dalam properties atau function argument tsb.
+		Di PHP 7.4 dikenalkan nullable type, jadi kita bisa mengirim data null ke properties/ function arguments
+		Caranya sebelum type declaration kita bisa tambahkan tanda ?
+		
+Function
+	Selain menambahkan properties, kita juga bisa menambahkan function ke object
+	Caranya dengan mendeklarasikan function tsb di dalam block class
+	Sama seperti function biasanya, kita juga bisa menambahkan return value dan parameter
+	Untuk mengakses function tsb, kita bisa menggunakan -> dan diikuti dengan nama methodnya. Sama seperti akses properties
+	
+This Keyword
+	Saat kita membuat kode di dalam function di dalam class, kita bisa menggunakan kata kunci this untuk mengakses object saat ini
+	Misal kadang kita butuh mengakses properties atau function lain di class yg sama
+	
+Constant
+	Properties di class bisa diubah, mirip variable
+	di Class, kita juga bisa membuat Constant, data yg tidak bisa diubah
+	Sejak php7.4 kita bisa menggunakan kata kunci const untuk membuat constant, mirip seperti variable namun tidak mengunakan $
+	Mengakses CONSTANT
+		require_once, lalu panggil NamaClass::NAMAKONSTANT
+		
+Self Keyword
+	Properties vs Constant
+		-Saat kita membuat object, properties yg terdapat di class akan secara otomatis dibuat per object. 
+		maka untuk mengakses properties, kita perlu menggunakan object, atau jika dari dalam object tersebut, kita perlu menggunakan
+		kata kunci this
+		-Berbeda, constant di class tidak akan dibuat per object. Constant itu hidupnya di class, bukan di object. jadi perlu akses
+			NamaClass::NAMA_CONSTANT
+		-Secara sederhana, properties akan dibuat satu per instance class (object), sedangkan constant dibuat satu per class
+		
+	Self Keyword
+		-Jika di dalam class (misal di function) kita ingin mengakses constant, kita perlu mengakses menggunakan NamaClass::NAMA_CONSTANT
+		-Namun jika di dalam class yg sama, kita bisa menggunakan kata kunci self untuk mempermudah
+	This untuk mengakses object saat ini, kalo self untuk mengakses class saat ini
+	
+then Constructor
