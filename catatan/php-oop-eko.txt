@@ -118,3 +118,37 @@ Function dan Constant di namespace
 Global namespace
 	Secara default, saat kita membuat kode PHP, maka akan disimpan di Global namespace.
 	Ini adalah namespace yg tidak memiliki nama namespace
+	
+Import
+	use Keyboard
+		Untuk menggunakan class, function atau constant di namespace, kita perlu menyebutkan nama namespacenya di awal
+		jika terlalu sering menggunakan class, maka akan terlalu banyak duplikasi dengan menyebut namespace berkali-kali
+		Hal ini bisa kita hindari dengan cara mengimport class, function, atau constant tsb dengan menggunakan kata kunci use
+		
+	Alias
+		Saat kita menggunakan use, artinya kita tidak lagi perlu menggunakan nama namespace diawal class ketika kita membuat class tsb
+		Jika kita ingin membuat nama classnya sama, maka bisa menggunakan alias
+		Alias adalah kemampuan membuat nama lain dari class, function, atau constant yg ada.
+		Kita bisa menggunakan kata kunci as setelah melakukan use
+		
+	Group use Declaration
+		Kita bisa mengimport beberapa class, function atau constant dalam satu perintah use
+		Untuk melakukan itu, kita perlu {}
+		
+Visibility
+	Atau Mofifier adalah kemampuan properties, function dan construct dapat diakses dari mana saja
+	Secara default, properties, function dan constant yg kita buat di dalam class bisa diakses dr mana saja, atau artinya dia public
+	Selain public, masih ada visibility lainnya
+	Secara default, kata kunci var untuk properties adalah sifatnya public.
+Access Level
+	public Class(y) | Subclass(y) | World(y)
+	protected Class(y) | Subclass(y) | World(x)
+	private Class(y) | Subclass(x) | World(x)
+	
+Function Overriding
+	Merupakan kemampuan mendeklarasikan ulang function di child class, yg sudah ada di parent class.
+	Saat melakukan overriding, ketika kita membuat object dari class child, function yg ada di class parent tidak bisa diakses lagi
+	
+Parent Keyword
+	Untuk mengakses function milik class parent, kita bisa menggunakan kata kunci parent
+	Sederhananya, parent berfungsi untuk mengakses class parent
