@@ -84,4 +84,20 @@ Self Keyword
 		-Namun jika di dalam class yg sama, kita bisa menggunakan kata kunci self untuk mempermudah
 	This untuk mengakses object saat ini, kalo self untuk mengakses class saat ini
 	
-then Constructor
+Constructor
+	Saat kita membuat Object, maka kita seperti memanggil sebuah function, karena kita menggunakan kurung ()
+	Di dalam class PHP, kita bisa membuat constructor, merupakan function yg akan dipanggil saat pertama kali Object dibuat
+	Mirip seperti di function, kita bisa memberi parameter pada constructor
+	Nama constructor di PHP haruslah __construct()
+	Construct adalah function yg dipanggil ketika membuat object
+	
+Destructor
+	Jika constructor adalah function yg akan dipanggil ketika object dibuat,
+	Destructor merupakan function yg akan dipanggil ketika object dihapus dari memori
+	Untuk membuatnya, kita bisa menggunakan __destruct()
+	Khusus destructor, kita tidak boleh menambahkan function argument
+	Dalam penggunaan sehari-hari, ini cocok untuk menutup koneksi ke database atau menutup proses menulis ke file, sehingga tidak terjadi
+	memori leak
+	
+Inheritance
+	
