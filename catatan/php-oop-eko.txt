@@ -152,3 +152,18 @@ Function Overriding
 Parent Keyword
 	Untuk mengakses function milik class parent, kita bisa menggunakan kata kunci parent
 	Sederhananya, parent berfungsi untuk mengakses class parent
+	
+Constructor Overriding
+	Karena constructor sama seperti function, maka constructor bisa di deklarasikan ulang di class Child nya
+	Di PHP kita bisa meng override function dengan arguments yg berbeda, namun sangat tidak disarankan
+	Jika kita meng override function dengan arguments yg berbeda, maka PHP akan menampilkan WARNING
+	Namun berbeda dengan constructor overriding, kita boleh meng override dengan mengubah arguments nya, namun direkomendasikan untuk
+	memanggil parent constructor.
+	
+Polimorfisme
+	Berasal dari bahasa Yunani, artinya banyak bentuk
+	Dalam OOP, maksudnya kemampuan object untuk berubah bentuk menjadi bentuk lain
+	Polimorfisme erat kaitannya dengan Inheritance
+	
+Type Check and Casts
+	
