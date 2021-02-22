@@ -100,4 +100,21 @@ Destructor
 	memori leak
 	
 Inheritance
+	Merupakan kemampuan untuk menurunkan sebuah class ke class lain, dengan artian kita bisa membuat class Parent dan Child
+	Child hanya memiliki 1 parent, namun Parent bisa memiliki banyak Child
+	Saat sebuah class diturunkan, maka semua properties dan function yg ada di class Parent secara otomatis akan dimiliki oleh class Child
+	Untuk melakukan pewarisan, kita harus menggunakan kata kunci extends lalu diikuti dengan nama class parentnya
 	
+Namespace
+	Saat membuat aplikasi, kita akan membuat banyak sekali class
+	Jika terlalu banyak, kadang menyulitkan kita untuk mencari class
+	PHP memiliki fitur namanya namespace, dimana kita bisa menyimpan class kita di dalam namespace
+	Namespace bisa nested, dan jika kita ingin mengakses class yg ada di namespace, kita perlu menyebutkan nama namespacenya
+	Namespace bagus ketika kita punya beberapa class yg sama, dengan menggunakan namespace nama class sama tidak akan membuat php error
+Membuat namespace
+	pakai kata kunci namespace, jika sub nemspace pakai \ setelah namespace sebelumnya
+Function dan Constant di namespace
+	Jika kita ingin menggunakan function atau constant tsb, kita bisa menggunakannya dengan diawali dengan nama namespace nya
+Global namespace
+	Secara default, saat kita membuat kode PHP, maka akan disimpan di Global namespace.
+	Ini adalah namespace yg tidak memiliki nama namespace
