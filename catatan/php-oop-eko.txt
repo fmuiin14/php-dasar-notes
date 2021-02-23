@@ -166,4 +166,20 @@ Polimorfisme
 	Polimorfisme erat kaitannya dengan Inheritance
 	
 Type Check and Casts
+	Sebelumnya kita sudah tau cara melakukan konversi tipe data bukan class
+	Khusus untuk tipe data object, kita tidak perlu melakukan konversi secara eksplisit
+	Namun agar aman, sebelum melakukan casts, pastikan kita melakukan type check (pengecekan tipe data) dengan menggunakan
+	kata kunci instanceof
+	hasilnya adalah boolean, true jika tipe data sesuai, false jika tidak sesuai
 	
+Abstract Class
+	Class bisa kita jadikan sebagai abstract class
+	Artinya class tsb tidak bisa dijadikan object secara langsung, hanya bisa diturunkan
+	Untuk membuatnya kita bisa menggunakan kata kunci abstrak sebelum kata class
+	Abstrak class bisa kita gunakan sebagai kontrak child class
+	
+Abstract Function
+	Saat kita membuat abstract function, kita tidak boleh membuat block function untuk function tsb
+	Artinya, abstract function wajib di override di class child
+	Abstract function tidak boleh memiliki access modifier private
+void artinya tidak mengembalikkan data
