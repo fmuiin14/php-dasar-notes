@@ -183,3 +183,17 @@ Abstract Function
 	Artinya, abstract function wajib di override di class child
 	Abstract function tidak boleh memiliki access modifier private
 void artinya tidak mengembalikkan data
+
+Getter and Setter
+	Encapsulation
+		Memastikan data sensitif sebuah object tersembunyi dari akses luar
+		Bertujuan agar kita bisa menjaga supaya data sebuah object tetap valid dan baik
+		Untuk membuat ini, kita membuat semua properties menggunakan access modifier private, sehingga tidak bisa diakses/diubah dr luar
+		Agar bisa diubah, kita akan menyediakan function untuk mengubah dan mendapatkan properties tsb
+	Getter
+		function untuk mengambil data field
+	Setter 
+		function untuk mengubah data field
+		
+Interface
+	
