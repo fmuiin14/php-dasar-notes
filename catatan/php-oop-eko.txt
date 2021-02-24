@@ -232,3 +232,57 @@ Trait Visibility Override
 	Namun untuk melakukan ini tidak perlu membuat function baru di class, kita bisa gunakan secara sederhana ketika menggunakan traitnya
 	
 Trait Conflict
+	Jika kita menggunakan lebih dari satu trait, lalu terdapat function yg sama di trait tersebut, maka akan terjadi conflict
+	Jika terjadi conflict, kita bisa mengatasinya dengan menggunakan kata kunci insteadof
+	
+Trait Inheritance
+	Class bisa menggunakan trait lebih dari satu
+	bagaimana dengan trait yg menggunakan trait lain?
+	Bisa, mirip seperti interface yg bisa implement interface lain
+	Untuk menggunakan trait lain dari trait, penggunaannya sama seperti dengan penggunakan trait di class
+	
+Final Class
+	kata kunci final bisa digunakan di class, dimana jika kita menggunakan kata kunci final sebelum class, maka kita menandakan bahwa
+	class tersebut tidak bisa diwariskan lagi
+	Secara otomatis semua class child nya akan error
+	
+Final Function
+	Jika sebuah function ditambahkan kata kunci final, maka function tsb tidak bisa di override lagi di class child nya
+	Ini sangat cocok jika kita ingin mengunci implementasi dari sebuah method agar tidak bisa diubah lagi oleh class childnya
+	
+Anonymous Class
+	Merupakan class tanpa nama, kemampuan mendeklarasikan class, sekaligus instansiasi object nya secara langsung
+	Sangat cocok ketika berhadapan dengan kasus membuat implementasi interface atau abstract class sederhana, tanpa harus membuat
+	implementasi classnya
+BIKIN OBJECT ITU DARI CLASS
+
+Constructor di Anonymous Class
+	Bisa juga constructor, kita bisa menambahkan kalau mau
+	
+Static Keyword
+	Merupakan keyword yg bisa kita gunakan untuk membuat properties atau function di class, bisa diakses secara langsung tanpa
+	menginstansiasi class terlebih dahulu
+	Saat kita buat static properties/ function, secara otomatis hal itu tidak akan berhubungan lagi dengan class instance yg kita buat.
+	Untuk cara mengakses static properties dan function sama seperti mengakses constant, kita bisa menggunakan operator ::
+	Static function tidak bisa mengakses function biasa, karena function biasa menempel pada class instance, sedangkan static function tidak
+	
+stdClass
+	Merupakan class kosong bawaan dari PHP, biasanya digunakan ketika ingin konversi tipe data lain menjadi Object
+	Sangat berguna ketika misal ingin melakukan konversi dari tipe data array ke object secara otomatis
+	
+Object Iteration
+	Saat kita membuat object dari class, kita bisa melakukan iterasi ke semua properties yg terdapat di object tersebut dengan foreach
+	Hal ini mempermudah kita saat ingin mengakses semua properties yg ada di object
+	Secara default, hanya properties yg public yg bisa diakses oleh foreach
+	
+Iterator
+	Sebelumnya kita melakukan iterasi data di properties secara otomatis menggunakan foreach
+	Jika kita ingin menangani hal ini secara manual, bisa menggunakan iterator
+	Adalah interface yg digunakan untuk melakukan iterasi, namun membuat secara manual cukup ribet, jadi kita akan gunakan
+	ArrayIterator, yaitu iterator yg menggunakan array sebagai data iterasinya
+	Agar class kita bisa di iterasi secara manual, kita bisa menggunakan interface IteratorAggregate, disana kita hanya butuh 
+	meng-Override function getIterator() yg mengembalikkan data Iterator
+	
+Generator
+	Untuk membuat object yg bisa di iterasi, kita menggunakan iterator. Pembuatan iterator manual sangatlah ribet.
+	Di PHP ada fitur Generator, bisa kita gunakan untuk membuat iterator secara otomatis hanya dengan menggunakan kata yield
