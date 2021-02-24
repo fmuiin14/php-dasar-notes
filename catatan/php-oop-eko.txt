@@ -196,4 +196,14 @@ Getter and Setter
 		function untuk mengubah data field
 		
 Interface
-	
+	Sebelumnya sudah tau bahwa abstract class bisa digunakan sebagai kotrak untuk class child nya
+	Namun sebenarnya yg lebih tepat untuk kontrak adalah interface
+	Interface mirip seperti abstract class, yg membedakan adalah di interface, semua method otomatis abstract tidak memiliki block
+	Di interface, kita tidak boleh memiliki properties, kita hanya boleh memiliki constant
+	Untuk mewariskan interface, kita tidak menggunakan kata kunci extends, tp implements
+	Berbeda dengan class, kita bisa implements lebih dari satu interface
+Interface Inheritance
+	Di PHP, child class hanya bisa punya 1 class parent
+	Berbeda dengan interface, sebuah child class bisa implements lebih dari 1 interface
+	Bahkan interface pun bisa implement interface lain, bisa lebih dari 1. Namun jika interface ingin mewarisi interface lain,
+	kita menggunakan kata kunci extends bukan implements
