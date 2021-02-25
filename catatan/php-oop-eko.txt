@@ -286,3 +286,34 @@ Iterator
 Generator
 	Untuk membuat object yg bisa di iterasi, kita menggunakan iterator. Pembuatan iterator manual sangatlah ribet.
 	Di PHP ada fitur Generator, bisa kita gunakan untuk membuat iterator secara otomatis hanya dengan menggunakan kata yield
+	
+Object Cloning
+	Bisa menggunakan perintah clone untuk membuat duplikasi object.
+	Secara otomatis semua properties di object awal akan di duplikasi ke object baru
+__clone() Function
+	Misal kita ingin menyalin beberapa properties saja, Jika ingin memodifikasi PHP dalam melakukan clone, kita bisa membuat function
+	di dalam classnya dengan nama function __clone()
+	Function __clone akan dipanggil di object hasil duplikasi setelah proses duplikasi selesai
+	Jika kita ingin menghapus beberapa properti, bisa lakukan di function __clone()
+	
+Comparing Object
+	Untuk membandingkan 2 buah objek, sama seperti yg lain bisa menggunakan == (equals) dan === (identity)
+	== membandingkan semua properties yg terdapat di object tersebut, dan tiap properties juga akan dibandingkan menggunakan ==
+	=== membandingkan apakah object identik, artinya mengacu pd object yg sama
+	
+Magic Function
+	Merupakan function yg sudah ditentukan kegunaannya di PHP
+	Contohnya __construct, __destruct(), __clone()
+
+__toString() Function
+	Membuat string dari object
+	
+__invoke() Function
+	Function yg di eksekusi ketika object yg kita buat dianggap sebagai function
+	Misal membuat object $student, lalu melakukan $student(), maka secara otomatis __invoke() akan di eksekusi
+	
+__debugInfo() Function
+	debug variabel menggunakan function var_dump
+	sebenarnya, ini memanggil function __debugInfo()
+	Jika kita ingin mengubah isi dari debugInfo, kita bisa menggunakan function __debugInfo()
+DAN MASIH BANYAK LAGEEE
