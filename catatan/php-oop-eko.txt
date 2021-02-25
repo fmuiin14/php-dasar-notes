@@ -354,3 +354,28 @@ Covariance dan Contravariance
 	Sata kita override function dari parent class, biasanya di child class kita akan membuat function yg sama dengan function di parent
 	Covariance memungkinkan kita meng override return function yg di parent dengan return value yg lebih spesifik
 	Contravariance memperbolehkan sebuah child class untuk membuat function argument yg lebih tidak spesifik dibanding parentnya
+	
+DateTime
+	Digunakan untuk memanipulasi data waktu
+DateTime Function
+	setTime($hour, $minute, $second) //mengubah waktu DateTime
+	setDate($year, $month, $day) //mengubah tanggal DateTime
+	setTimestamp($unixTimestamp) //mengubah unix timestamp DateTime
+	
+DateInterval
+	Kita bisa manipulasi waktu dan tanggal sebagian saja, menggunakan add milik DateTime
+	Function add tsb menerima parameter berupa DateInterval
+	Saat menggunakan DateInterval duration, kita perlu menentukan berapa banyak kita menambah interval.
+	Untuk pembuatan duration, harus diawali dengan karakter P yg artinya period
+	
+DateTimeZone
+	Kita juga bisa menggunakan function setTimeZone untuk mengubah timezone DateTime
+	
+Format DateTime
+	Kita bisa membuat representasi string dari DateTime yg sudah kita buat, menggunakan function Format()
+	Function ini menerima argumen berupa string, bisa kita gunakan untuk memanipulasi cara kita menampilkan string format waktu
+	
+Parse DateTime
+	hal sebaliknya, yaitu parsing string menjadi DateTime sesuai dengan format yg kita mau
+	Bisa menggunakan static function createFromFormat() dari class DateTime
+	
