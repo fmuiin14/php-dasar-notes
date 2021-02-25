@@ -317,3 +317,35 @@ __debugInfo() Function
 	sebenarnya, ini memanggil function __debugInfo()
 	Jika kita ingin mengubah isi dari debugInfo, kita bisa menggunakan function __debugInfo()
 DAN MASIH BANYAK LAGEEE
+
+Overloading
+	Merupakan kemampuan secara dinamis membuat properties/ function
+	Mirip meta programming kalau di bahasa pemrograman Ruby
+	Di Java, overloading maksudnya membuat function dengan nama sama
+	Erat kaitannya dengan magic function
+
+Properties Overloading
+	Saat kita mengakses properties, maka otomatis properties akan diakses
+	Jika ternyata properties tsb tidak tersedia di objectnya, maka PHP tidak secara otomatis menjadikan error
+	PHP akan melakukan fallback ke magic function
+	Dengan demikian, kita bisa membuat properties secara dinamis dengan memanfaatkan magic function tsb
+	Ada beberapa magic function yg bisa kita gunakan untuk properties overloading
+
+Magic Function untuk Properies Overriding
+	__set($name, $value): void //dieksekusi ketika mengubah properties yg tidak tersedia
+		Mengubah data berdasarkan properti namenya
+	__get($name): mixed //dieksekusi ketika mengakses properties yg tidak tersedia
+		Mengambil data berdasarkan properti namenya
+	__isset($name): bool //dieksekusi ketika cek isset() atau empty() properties yg tidak tersedia
+		Mengecek apakah sudah di set berdasarkan properti namenya
+	__unset($name): void //dieksekusi ketika menggunakan unset() properties yg tidak tersedia
+		Untuk unset berdasarkan properti namenya
+		
+Function Overloading
+	Jika function yg diakses tidak tersedia di objectnya, maka PHP tidak secara otomatis menjadikan itu error
+	PHP akan fallback ke magic function
+	Denga demikian, kita bisa membuat function secara dinamis dengan memanfaatkan magic function tsb
+	
+Magic Function untuk Function Overloading
+	_call($name, $arguments): mixed //dieksekusi ketika memanggil function yg tidak tersedia
+	static __callStatic($name, $arguments): mixed //dieksekusi ketika memanggil static function yg tidak tersedia
