@@ -349,3 +349,8 @@ Function Overloading
 Magic Function untuk Function Overloading
 	_call($name, $arguments): mixed //dieksekusi ketika memanggil function yg tidak tersedia
 	static __callStatic($name, $arguments): mixed //dieksekusi ketika memanggil static function yg tidak tersedia
+	
+Covariance dan Contravariance
+	Sata kita override function dari parent class, biasanya di child class kita akan membuat function yg sama dengan function di parent
+	Covariance memungkinkan kita meng override return function yg di parent dengan return value yg lebih spesifik
+	Contravariance memperbolehkan sebuah child class untuk membuat function argument yg lebih tidak spesifik dibanding parentnya
